@@ -1,0 +1,14 @@
+<h1>Ask a Question</h1>
+
+<%= form_for @question do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+<br>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+<br>
+  <%= f.label :tags %>
+  <%= f.text_field :tags %>
+<br>
+  <%= f.submit "Submit Question" %>
+<% end %>
