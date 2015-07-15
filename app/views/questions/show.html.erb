@@ -1,0 +1,7 @@
+<!-- Show Question (from Post partial) -->
+<%= render partial: "post", locals: {post: @questions[params[:id].to_i - 1]} %>
+  <!-- Show _comments Partial Will occur inside of _posts partial -->
+ <!-- Show Answers (from Post partial) -->
+<%= render partial: "post", collection: @answers %>
+  <!-- Show _comments Partial Will occur inside of _posts partial -->
+
