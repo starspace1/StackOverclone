@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">StackOverclone</a>
+      <a class="navbar-brand" href="<%= root_path %>">StackOverclone</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -31,9 +31,9 @@
 
 <div align="right">
   <div class="btn-group" role="group" aria-label="...">
-    <button type="button" class="btn btn-default">Questions</button>
-    <button type="button" class="btn btn-default">Users</button>
+    <a href="<%= questions_path %>" class="btn btn-default" role="button">Questions</a>
+     <a href="<%= users_path %>" class="btn btn-default" role="button">Users</a>
     <button type="button" class="btn btn-default">Unanswered</button>
-    <button type="button" class="btn btn-default">Ask Question</button>
+    <a href="<%= new_question_path %>" class="btn btn-default" role="button">Ask Question</a>
   </div>
 </div>
