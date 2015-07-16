@@ -1,0 +1,34 @@
+<h1> Enter New User Information </h1>
+
+<%= render 'form' %>
+
+<br> <br>
+<h2> Show All Users </h2>
+	
+<% @users.each do |user| %>	
+	<div class="list-users">
+		<table>
+			<tbody>
+				<tr>
+					<td>				<!-- <% #TODO: do we click on user name for each info? %> -->
+						<div class="user-details">	
+							<a href="/users/<%= "#{user_id}" %>"> <%= {"#{user_name}"} %> </a>
+							<span> <%= location %> </span>
+							<span> <%= knowledge %> </span>
+							<span> Questions Asked: <%= questions_asked %> </span>
+							<span> Questions Answered: <%= questions_answered %> </span>
+							<span> Votes : <%= votes %> </span>
+						</div>
+					</td>			
+				</tr>				<!-- <% #TODO: variables  questions_asked  questions_answered %> -->
+			</tbody>
+		</table>	
+	</div>	
+<% end %>
+
+
+	<%= link_to 'Edit User Information', edit_user_path(user) %>
+	<%= link_to 'Home Page', root_path(user) %>
+
+
+
