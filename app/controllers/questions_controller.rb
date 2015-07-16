@@ -8,4 +8,12 @@ class QuestionsController < ApplicationController
     @comments = ["Comment1", "Comment2", "Comment3"]
   end
   
+  def new
+    @question = Question.new
+  end	
+
+  def create
+    @question = Question.new(question_params)
+  end	
+
 end
