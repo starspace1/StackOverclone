@@ -15,9 +15,9 @@
 							<a href="/users/<%= "#{user_id}" %>"> <%= {"#{user_name}"} %> </a>
 							<span> <%= location %> </span>
 							<span> <%= knowledge %> </span>
-							<span> Questions Asked: <%= questions_asked %> </span>
-							<span> Questions Answered: <%= questions_answered %> </span>
-							<span> Votes : <%= votes %> </span>
+							<span> Questions Asked: <%= questions_asked.count %> </span>
+							<span> Questions Answered: <%= questions_answered.count %> </span>
+							<span> Votes : <%= votes.count %> </span>
 						</div>
 					</td>			
 				</tr>				<!-- <% #TODO: variables  questions_asked  questions_answered %> -->
