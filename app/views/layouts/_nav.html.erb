@@ -20,8 +20,12 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a>Username</a></li>
-        <li><a href="#">Log Out</a></li>
+        <% if session[:user_id].nil? %>
+          <li><a href="<%= login_path %>">Log In</a></li>
+        <% else %>
+          <li><a>Username</a></li> <!-- TODO: hook up to @user.username -->
+          <li><%= link_to "Log Out", logout_path, method: :delete %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
