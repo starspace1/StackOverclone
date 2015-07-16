@@ -9,5 +9,17 @@
     </div>
   </div>
 
-  <%= render partial: 'question' %>
+  <h2 style='text-align: left'>Top Questions</h2>
+  <table class='table'>
+    <tr>
+      <th class='votes' style='width: 1%'>Votes</th>
+      <th class='answers' style='width: 1%'>Answers</th>
+      <th class='views' style='width: 1%'>Views</th>
+      <th></th>
+      <th></th>
+    </tr>
+      <%= render partial: 'question' %>
+      <%= render partial: 'question' %>
+      <%= render partial: 'question' %>
+  </table>
 </div>
