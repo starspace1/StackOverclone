@@ -1,0 +1,32 @@
+<h1>Register a New User</h1>
+
+<div class="user_form">
+  <%= form_for(@user) do |f| %>
+  <fieldset>
+    <legend> Please enter your information : </legend>
+      <div class="field">
+        <%= f.label :username, 'Username' %><br>
+        <%= f.text_field :username, size: 40 %>
+      </div>
+      <div class="field">
+        <%= f.label :location, 'Location' %><br>
+        <%= f.text_field :location, size: 40 %>
+      </div>
+      <div class="field">
+       <%= f.label :knowledge, 'What languages do you work in?' %><br>
+       <%= f.text_field :knowledge, size: 70 %>
+      </div>
+      <div class="field">
+        <%= f.label :password, 'Password:' %><br>
+        <%= f.password_field :password, size: 40 %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation, 'Confirm Password:' %><br>
+        <%= f.password_field :password_confirmation, size: 40 %>
+      </div>   
+       <div class="actions">
+        <%= f.submit %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>
