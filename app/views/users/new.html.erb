@@ -4,29 +4,29 @@
   <%= form_for(@user) do |f| %>
   <fieldset>
     <legend> Please enter your information : </legend>
-      <div class="field">
+    <div class="row">
+      <div class="col-md-4">
         <%= f.label :username, 'Username' %><br>
-        <%= f.text_field :username, size: 40 %>
-      </div>
-      <div class="field">
+        <%= f.text_field :username, size: 40, class:'form-control' %>
+
         <%= f.label :location, 'Location' %><br>
-        <%= f.text_field :location, size: 40 %>
-      </div>
-      <div class="field">
+        <%= f.text_field :location, size: 40, class:'form-control' %>
+
+
        <%= f.label :knowledge, 'What languages do you work in?' %><br>
-       <%= f.text_field :knowledge, size: 70 %>
-      </div>
-      <div class="field">
+       <%= f.text_field :knowledge, size: 70, class:'form-control' %>
+
         <%= f.label :password, 'Password:' %><br>
-        <%= f.password_field :password, size: 40 %>
-      </div>
-      <div class="field">
+        <%= f.password_field :password, size: 40, class:'form-control' %>
+
         <%= f.label :password_confirmation, 'Confirm Password:' %><br>
-        <%= f.password_field :password_confirmation, size: 40 %>
-      </div>   
+        <%= f.password_field :password_confirmation, size: 40, class:'form-control' %>
+        <br>
        <div class="actions">
         <%= f.submit %>
-      </div>
+       </div>
+     </div>
+    </div>
     </fieldset>
   <% end %>
 </div>
