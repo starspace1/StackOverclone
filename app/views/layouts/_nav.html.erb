@@ -23,7 +23,7 @@
         <% if session[:user_id].nil? %>
           <li><a href="<%= login_path %>">Log In</a></li>
         <% else %>
-          <li><a>Username</a></li> <!-- TODO: hook up to @user.username -->
+          <li><a><%= @current_user.username %></a></li>
           <li><%= link_to "Log Out", logout_path, method: :delete %></li>
         <% end %>
       </ul>
