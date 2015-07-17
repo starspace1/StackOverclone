@@ -1,12 +1,12 @@
 class QuestionsController < ApplicationController
+  impressionist actions: [:show]
 
   def index
   	@questions = Question.all
   end
   def show
-    @questions = ["Question1", "Question2", "Question3"]
-    @answers = ["Answer1", "Answer2", "Answer3"]
-    @comments = ["Comment1", "Comment2", "Comment3"]
+   @question = Question.find(params[:id])
+   impressionist(@question)
   end
   
   def new
