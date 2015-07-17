@@ -1,20 +1,20 @@
-<%= form_tag do %>
-  <fieldset>
-    <legend>Please Log In</legend>
-    <div>
-      <%= label_tag :username, 'Username:' %>
-      <%= text_field_tag :username, params[:username] %>
-    </div>
+<div class="row">
+  <%= form_tag do %>
+    <fieldset>
+      <legend>Please Log In</legend>
+      <div class='col-md-4'>
+        <%= label_tag :username, 'Username:' %>
+        <%= text_field_tag :username, params[:username], class:'form-control' %>
 
-    <div>
-      <%= label_tag :password, 'Password:' %>
-      <%= text_field_tag :password, params[:password] %>
-    </div>
+        <%= label_tag :password, 'Password:' %>
+        <%= text_field_tag :password, params[:password], class:'form-control' %>
+        <br>
 
-    <div>
-      <%= submit_tag "Login" %>
-    </div>
-  </fieldset>
-<% end %>
+      <div>
+        <%= submit_tag "Login" %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>
 
 <p> Don't have an account? <%= link_to "Register", new_user_path %> </p>
