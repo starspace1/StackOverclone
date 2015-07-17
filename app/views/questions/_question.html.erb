@@ -1,11 +1,11 @@
 <tr>
   <td class='votes' style='text-align: center'>2</td>
-  <td class='answers'style='text-align: center'>3</td>
-  <td class='views'style='text-align: center'>4</td>
+  <td class='answers'style='text-align: center'><%= "#{question.answers.count}" %></td>
+  <td class='views'style='text-align: center'><%= "#{question.impressionist_count}" %></td>
   <td>
     <table>
       <tr>
-        <td colspan="3"><a href="#">Really Really Really rediculously long title</a></td>
+        <td colspan="3"><%= link_to question.title, question_path(question) %></td>
       </tr>
       <tr>
         <td>
@@ -13,7 +13,7 @@
           <a class="btn btn-default btn-xs" href="#" role="button">Tag2</a>
           <a class="btn btn-default btn-xs" href="#" role="button">Tag3</a>
         </td>
-        <td style='text-align: right'><small>Author Name and posted at</small></td>
+        <td style='text-align: right'><small><%= "#{question.user.username} at #{question.updated_at}"%></small></td>
       </tr>
     </table>
   </td>
