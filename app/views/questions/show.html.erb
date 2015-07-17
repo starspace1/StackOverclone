@@ -1,8 +1,10 @@
+<%= "#{@question.impressionist_count} views so far!" %>
+
 <!-- Show Question (from Post partial) -->
-<%= render partial: "post", locals: {post: @questions[params[:id].to_i - 1]} %>
+<%= render partial: "post", locals: {post: @question}%>
   <!-- Show _comments Partial Will occur inside of _posts partial -->
  <!-- Show Answers (from Post partial) -->
-<%= render partial: "post", collection: @answers %>
+<%= render partial: "post", collection: @question.answers %>
   <!-- Show _comments Partial Will occur inside of _posts partial -->
 <h2>Your Answer</h2>
 <form>

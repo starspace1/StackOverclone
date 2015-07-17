@@ -1,7 +1,16 @@
-<h1> <%= post %> </h1>
-<p> This is either a question or an answer. We are polymorphic types of posts. This is either a question or an answer. We are polymorphic types of posts. This is either a question or an answer. We are polymorphic types of posts. This is either a question or an answer. We are polymorphic types of posts. </p>
-<%= render partial: "comment", collection: @comments %>
-<h2>Add A Comment</h2>
+<% if post.type == "Question" %>
+  <h1> <%= post.title %> </h1>
+<% end %>
+
+<p> 
+  <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+  <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span>
+  <%= post.body %>
+</p>
+
+<%= render partial: "comment", collection: post.comments %>
+
+<h4>Add A Comment</h4>
 <form>
   <textarea> </textarea>
   <input type="submit"></input>
