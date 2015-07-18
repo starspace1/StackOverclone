@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   root 'questions#index'
 
-  get 'questions/unanswered' => 'questions#unanswered', as: :unanswered
+  get 'questions/unanswered'
+  get 'questions/recent'
 
   resources :questions
 

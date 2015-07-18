@@ -23,6 +23,11 @@ class QuestionsController < ApplicationController
     @questions = Question.unanswered
     render :index
   end
+
+  def recent
+    @questions = Question.order(updated_at: :desc)
+    render :index
+  end
   
   private
 
