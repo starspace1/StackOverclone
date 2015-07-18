@@ -78,3 +78,5 @@ q2_a1.comments.create!(body: "Thanks!", user_id: 3)
 q1_a1.comments.create!(body: "Thanks jerkface.", user_id: 2)
 
 q3_a1.comments.create!(body: "Thanks jerkface.", user_id: 4)
+
+user_1.questions.create(title: "This may be unanswerable but...", body: "It probably is, for testing purposes.")

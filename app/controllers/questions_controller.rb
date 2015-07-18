@@ -4,6 +4,7 @@ class QuestionsController < ApplicationController
   def index
   	@questions = Question.all
   end
+
   def show
    @question = Question.find(params[:id])
    impressionist(@question)
@@ -16,7 +17,12 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.create(question_params)
     redirect_to root_path
-  end	
+  end
+
+  def unanswered
+    @questions = Question.unanswered
+    render :index
+  end
   
   private
 
