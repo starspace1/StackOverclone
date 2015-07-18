@@ -15,7 +15,7 @@ class Question < Post
     impressionist_count
   end
 
-  def self.test
+  def self.unanswered
     # I know this is awful...HALP
     dat_array = []
     all_dem_records = self.all

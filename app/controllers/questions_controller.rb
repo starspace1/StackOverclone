@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
   end
 
   def unanswered
-    @questions = Question.all
+    @questions = Question.unanswered
     render :index
   end
   
