@@ -15,4 +15,14 @@ class Question < Post
     impressionist_count
   end
 
+  def self.test
+    # I know this is awful...HALP
+    dat_array = []
+    all_dem_records = self.all
+    all_dem_records.each do |dat_record|
+      dat_array << dat_record unless dat_record.is_answered?
+    end
+    dat_array
+  end
+
 end
