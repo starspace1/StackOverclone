@@ -9,11 +9,9 @@
       </tr>
       <tr>
         <td>
-          <a class="btn btn-default btn-xs" href="#" role="button">Tag1</a>
-          <a class="btn btn-default btn-xs" href="#" role="button">Tag2</a>
-          <a class="btn btn-default btn-xs" href="#" role="button">Tag3</a>
+          <p><%#= raw question.tag_list.map {|tag| link_to t, tag_path(t).join (", ")  %></p>
         </td>
-        <td style='text-align: right'><small><%= "#{question.user.username} at #{question.updated_at}"%></small></td>
+        <td style='text-align: right'><small><%= "#{question.user_id} at #{question.updated_at}"%></small></td>
       </tr>
     </table>
   </td>

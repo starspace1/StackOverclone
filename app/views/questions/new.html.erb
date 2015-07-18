@@ -13,12 +13,11 @@
   </div>
   <br>
   <div class='form-group'>
-    <%= f.label :tags %>
-    <%= f.text_field :tags, class:'form-control' %>
-  </div>  
+    <%= f.label :tag_list, "Tags (Separated by Commas)" %>
+    <%= f.text_field :tag_list, class:'form-control' %>
+  </div>
   <br>
     <%= f.submit "Submit Question" %>
   <% end %>
   </div>
 </div>
-
