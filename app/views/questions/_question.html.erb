@@ -1,5 +1,6 @@
 <tr>
-  <td class='votes' style='text-align: center'>2</td>
+  <td class='up-votes' style='text-align: center'><%= "#{question.get_upvotes.size}" %></td>
+   <td class='down-votes' style='text-align: center'><%= "#{question.get_downvotes.size}" %></td>
   <td class='answers'style='text-align: center'><%= "#{question.num_answers}" %></td>
   <td class='views'style='text-align: center'><%= "#{question.num_views}" %></td>
   <td>
