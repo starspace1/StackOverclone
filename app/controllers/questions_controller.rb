@@ -11,6 +11,10 @@ class QuestionsController < ApplicationController
   end
 
   def new
+    if session[:user_id].nil?
+      flash[:danger] = "You must be logged in to post a new question."
+      redirect_to login_path  
+    end
     @question = Question.new
   end
 
@@ -32,6 +36,18 @@ class QuestionsController < ApplicationController
   def recent
     @questions = Question.order(updated_at: :desc)
     render :index
+  end
+
+  def upvote
+    @question = Question.find(params[:id])
+    @question.upvote_by current_user
+    redirect_to :back
+  end
+
+  def downvote
+    @question = Question.find(params[:id])
+    @question.downvote_by current_user
+    redirect_to :back
   end
 
   private

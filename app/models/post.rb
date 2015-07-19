@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  acts_as_votable
   has_many :comments
   belongs_to :user
   validates_presence_of :body
@@ -17,3 +18,4 @@ class Post < ActiveRecord::Base
     self.tags = new_or_found_tags
   end
 end
+

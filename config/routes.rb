@@ -5,8 +5,15 @@ Rails.application.routes.draw do
   get 'questions/unanswered'
   get 'questions/recent'
 
-  resources :questions
   resources :tags
+
+  resources :questions do
+    member do
+      put "like",    to: "questions#upvote"
+      put "dislike", to: "questions#downvote"
+    end
+  end
+  
   resources :users
 
   get 'login' => 'sessions#new', as: :login

@@ -1,7 +1,7 @@
 <h1>Questions Tagged with <%= @tag.name %></h1>
 
 <ul>
-  <% @tag.post.each do |post| %>
-    <li><%= link_to post.title, post_path(post) %></li>
+  <% @tag.posts.each do |post| %>
+    <li><%= link_to post.title, question_path(post) %></li>
   <% end %>
 </ul>

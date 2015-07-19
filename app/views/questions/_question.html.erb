@@ -1,5 +1,6 @@
 <tr>
-  <td class='votes' style='text-align: center'>2</td>
+  <td class='up-votes' style='text-align: center'><%= "#{question.get_upvotes.size}" %></td>
+   <td class='down-votes' style='text-align: center'><%= "#{question.get_downvotes.size}" %></td>
   <td class='answers'style='text-align: center'><%= "#{question.num_answers}" %></td>
   <td class='views'style='text-align: center'><%= "#{question.num_views}" %></td>
   <td>
@@ -9,7 +10,7 @@
       </tr>
       <tr>
         <td style='text-align: right'><medium><%= question.tag_list %><medium></td>
-        <td style='text-align: left'><small><%= "#{question.user_id} at #{question.updated_at}"%></small></td>
+        <td style='text-align: left'><small><%= "#{question.user.username} at #{question.updated_at}"%></small></td>
       </tr>
     </table>
   </td>

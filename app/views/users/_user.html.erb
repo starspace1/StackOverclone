@@ -1,6 +1,7 @@
-<%= user.username %>
+<h3><%= user.username %></h3>
 <ul>
   <li>Location: <%= user.location %></li>
   <li>Knowledge: <%= user.knowledge %></li>
-  <li>Votes: <%= user.votes.to_i %></li>
+  <li>Total Questions Asked: <%= user.questions.size %></li>
+  <li>Total Questions Answered: <%= user.answers.size %></li>
 </ul>
