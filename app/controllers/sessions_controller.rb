@@ -5,11 +5,12 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
+      flash[:success] = "Success! Logged in as #{user.username}."
       session[:user_id] = user.id
       redirect_to root_path
     else
-      #TODO alert error
-      render :new
+      flash[:danger] = "You have entered an incorrect username/password combination. Please try again."
+      redirect_to login_path
     end
   end
 
