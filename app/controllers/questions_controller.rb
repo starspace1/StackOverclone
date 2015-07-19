@@ -37,11 +37,13 @@ class QuestionsController < ApplicationController
   def upvote
     @question = Question.find(params[:id])
     @question.upvote_by current_user
+    redirect_to :back
   end
 
   def downvote
     @question = Question.find(params[:id])
     @question.downvote_by current_user
+    redirect_to :back
   end
 
   private
