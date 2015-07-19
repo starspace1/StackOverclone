@@ -7,6 +7,7 @@
   <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span>
   <%= post.body %> <br>
  	<div>
+ 	<% if post.type == "Question" %>	
 		<%= link_to like_question_path, method: :put, class: "btn btn-default btn-sm" do %>
 			<span class="glyphicon glyphicon-triangle-top"></span>
 				Upvote
@@ -18,6 +19,7 @@
 				Downvote
 				<%= @question.get_downvotes.size %>	
 		<% end %>	<br> 			
+	<% end %>
 	</div> 
 </p> 
 
