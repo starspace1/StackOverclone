@@ -4,6 +4,7 @@
 <%= render partial: "post", locals: {post: @question}%>
   <!-- Show _comments Partial Will occur inside of _posts partial -->
  <!-- Show Answers (from Post partial) -->
+<h2> Answers </h2> 
 <%= render partial: "post", collection: @question.answers %>
   <!-- Show _comments Partial Will occur inside of _posts partial -->
 <h2>Your Answer</h2>
