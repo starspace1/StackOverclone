@@ -11,6 +11,10 @@ class QuestionsController < ApplicationController
   end
 
   def new
+    if session[:user_id].nil?
+      flash[:danger] = "You must be logged in to post a new question."
+      redirect_to login_path  
+    end
     @question = Question.new
   end
 
