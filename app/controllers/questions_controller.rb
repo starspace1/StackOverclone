@@ -34,6 +34,16 @@ class QuestionsController < ApplicationController
     render :index
   end
 
+  def upvote
+    @question = Question.find(params[:id])
+    @question.upvote_by current_user
+  end
+
+  def downvote
+    @question = Question.find(params[:id])
+    @question.downvote_by current_user
+  end
+
   private
 
   def question_params
