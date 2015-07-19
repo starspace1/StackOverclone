@@ -2,11 +2,7 @@
   <h1> <%= post.title %> </h1>
 <% end %>
 
-<p>
-  <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
-  <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span>
-  <%= post.body %>
-</p>
+<p><%= post.body %></p>
 
 <%= render partial: "tag" %>
 
