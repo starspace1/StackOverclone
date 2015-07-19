@@ -6,7 +6,7 @@
 
 <%= render partial: "tag" %>
 
-  <%= post.body %> <br>
+<p>
  	<div>
  	<% if post.type == "Question" %>	
 		<%= link_to like_question_path, method: :put, class: "btn btn-default btn-sm" do %>
