@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'questions/recent'
 
   resources :questions
-  get 'tags/:tag', to: 'questions#index', as: :tags
+  resources :tags
   resources :users
 
   get 'login' => 'sessions#new', as: :login

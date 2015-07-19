@@ -1,8 +1,7 @@
 class Question < Post
   has_many :answers
-  validates_presence_of :title
+  validates_presence_of :title, :body
   is_impressionable
-  acts_as_taggable
 
   def is_answered?
     num_answers > 0
