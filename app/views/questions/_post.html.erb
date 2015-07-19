@@ -2,9 +2,14 @@
   <h1> <%= post.title %> </h1>
 <% end %>
 
-<p> 
+<p>
   <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
   <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span>
+  <%= post.body %>
+</p>
+
+<%= render partial: "tag" %>
+
   <%= post.body %> <br>
  	<div>
  	<% if post.type == "Question" %>	
@@ -25,10 +30,8 @@
 
 <%= render partial: "comment", collection: post.comments %>
 
-
 <h4>Add A Comment</h4>
 	<form>
   	<textarea> </textarea>
   	<input type="submit"></input>
 	</form><br>
-

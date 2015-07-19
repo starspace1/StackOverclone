@@ -9,10 +9,8 @@
         <td colspan="3"><%= link_to question.title, question_path(question) %></td>
       </tr>
       <tr>
-        <td>
-          <p><%#= raw question.tag_list.map {|tag| link_to t, tag_path(t).join (", ")  %></p>
-        </td>
-        <td style='text-align: right'><small><%= "#{question.user_id} at #{question.updated_at}"%></small></td>
+        <td style='text-align: right'><medium><%= question.tag_list %><medium></td>
+        <td style='text-align: left'><small><%= "#{question.user.username} at #{question.updated_at}"%></small></td>
       </tr>
     </table>
   </td>

@@ -5,14 +5,14 @@ Rails.application.routes.draw do
   get 'questions/unanswered'
   get 'questions/recent'
 
+  resources :tags
+
   resources :questions do
     member do
       put "like",    to: "questions#upvote"
       put "dislike", to: "questions#downvote"
     end
   end
-
-  get 'tags/:tag', to: 'questions#index', as: :tags
   
   resources :users
 
